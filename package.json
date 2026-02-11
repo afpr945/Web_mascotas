@@ -10,7 +10,6 @@
   },
   "dependencies": {
     "react": "18.2.0",
-    "gsap": "^3.14.2",
     "react-dom": "^19.2.4"
   },
   "devDependencies": {
