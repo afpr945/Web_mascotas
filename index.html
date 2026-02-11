@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Latin Growth Business | Web + AI para Negocios de Mascotas</title>
+    <title>Latin Growth Business | Pet Industry Evolution</title>
     
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -44,10 +44,15 @@
         html { scroll-behavior: smooth; }
         body { 
             font-family: 'Inter', sans-serif; 
-            color: #1A1A1A; 
-            background-color: #ffffff; 
+            background-color: var(--navy); 
             overflow-x: hidden;
             -webkit-font-smoothing: antialiased;
+        }
+
+        .text-gradient {
+            background: linear-gradient(135deg, var(--sky) 0%, var(--ocean) 50%, var(--yellow) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
 
         .btn-primary {
@@ -55,8 +60,6 @@
             color: var(--navy);
             box-shadow: 0 4px 20px rgba(251, 133, 0, 0.4);
             transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            position: relative;
-            overflow: hidden;
             display: inline-flex;
             align-items: center;
             justify-content: center;
@@ -67,43 +70,35 @@
             box-shadow: 0 12px 30px rgba(251, 133, 0, 0.6);
         }
 
-        .floating-paw {
-            position: absolute;
-            opacity: 0.1;
-            pointer-events: none;
-            z-index: 1;
+        .glass {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
         }
 
-        @keyframes float-organico {
-            0%, 100% { transform: translateY(0) rotate(0deg); }
-            50% { transform: translateY(-30px) rotate(15deg); }
+        @keyframes float-paws {
+            0%, 100% { transform: translateY(0) rotate(0deg); opacity: 0.1; }
+            50% { transform: translateY(-40px) rotate(15deg); opacity: 0.2; }
         }
 
-        .animate-float-organico { animation: float-organico 8s ease-in-out infinite; }
-        
-        .timeline-track::before {
+        .animate-float-paws { animation: float-paws 10s ease-in-out infinite; }
+
+        .timeline-line::before {
             content: '';
             position: absolute;
-            left: 50%; transform: translateX(-50%); width: 6px; height: 100%;
-            background: linear-gradient(180deg, var(--ocean) 0%, var(--sky) 50%, var(--orange) 100%);
+            left: 50%; transform: translateX(-50%); width: 2px; height: 100%;
+            background: linear-gradient(180deg, var(--ocean) 0%, var(--orange) 100%);
             z-index: 0;
-            border-radius: 100px;
-        }
-        
-        @media (max-width: 768px) {
-            .timeline-track::before { left: 45px; }
+            opacity: 0.3;
         }
 
-        .text-gradient-ocean {
-            background: linear-gradient(to right, #219EBC, #8ECAE6);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+        @media (max-width: 768px) {
+            .timeline-line::before { left: 30px; }
         }
 
         ::-webkit-scrollbar { width: 8px; }
-        ::-webkit-scrollbar-track { background: #f1f1f1; }
-        ::-webkit-scrollbar-thumb { background: var(--navy); border-radius: 10px; }
-        ::-webkit-scrollbar-thumb:hover { background: var(--ocean); }
+        ::-webkit-scrollbar-track { background: var(--navy); }
+        ::-webkit-scrollbar-thumb { background: var(--ocean); border-radius: 10px; }
     </style>
 
     <script type="importmap">
