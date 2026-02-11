@@ -166,24 +166,24 @@ const Hero = () => {
 const TrustWall = () => (
   <section className="py-20 bg-white border-y border-gray-100 overflow-hidden relative">
     <div className="max-w-7xl mx-auto px-6">
-      <p className="text-center text-navy/40 font-black uppercase tracking-[0.5em] text-[10px] mb-12">Líderes en Tecnología para Mascotas en California</p>
+      <p className="text-center text-navy/40 font-black uppercase tracking-[0.5em] text-[10px] mb-12">Empresas que ya crecen en automático</p>
       <div className="flex flex-wrap justify-center items-center gap-12 md:gap-24 opacity-30 grayscale hover:grayscale-0 transition-all duration-1000">
-        <span className="text-2xl md:text-4xl font-black text-navy italic tracking-tighter">7LCS STUDIO</span>
-        <span className="text-2xl md:text-4xl font-black text-navy italic tracking-tighter">PET CARE PRO</span>
+        <span className="text-2xl md:text-4xl font-black text-navy italic tracking-tighter">PET-IA</span>
         <span className="text-2xl md:text-4xl font-black text-navy italic tracking-tighter">LATIN GROWERS</span>
-        <span className="text-2xl md:text-4xl font-black text-navy italic tracking-tighter">VET-IA</span>
+        <span className="text-2xl md:text-4xl font-black text-navy italic tracking-tighter">7LCS STUDIO</span>
+        <span className="text-2xl md:text-4xl font-black text-navy italic tracking-tighter">CALI-GROOM</span>
       </div>
     </div>
   </section>
 );
 
-const Problems = () => {
+const PainPoints = () => {
   const items = [
-    { emoji: "😰", title: "WhatsApp Saturado", solution: "Tu AI responde en segundos, aclara dudas y agenda citas mientras tú trabajas." },
-    { emoji: "📅", title: "Citas Perdidas", solution: "Calendario inteligente que confirma y recuerda automáticamente por mensaje." },
-    { emoji: "📱", title: "Sin tiempo para redes", solution: "Estrategia de contenidos que atrae clientes sin que tengas que grabar mil videos." },
-    { emoji: "💸", title: "Fuga de Dinero", solution: "Dashboard simple para saber exactamente cuánto inviertes y cuánto ganas." },
-    { emoji: "🏆", title: "Marca Invisible", solution: "Diseño premium que te diferencia de la competencia al instante." }
+    { emoji: "😰", title: "Caos en WhatsApp", solution: "Tu AI responde en segundos, 24/7, sin que tú tengas que tocar el teléfono." },
+    { emoji: "📅", title: "Citas Olvidadas", solution: "Confirmaciones y recordatorios automáticos que reducen el ausentismo al 0%." },
+    { emoji: "📱", title: "Redes Vacías", solution: "Contenido estratégico que atrae dueños de mascotas calificados cada semana." },
+    { emoji: "💸", title: "Gastos Ciegos", solution: "Sabes exactamente cuánto inviertes y cuánto dinero nuevo entra a tu caja." },
+    { emoji: "🏆", title: "Marca Común", solution: "Identidad premium que te posiciona como el mejor de tu zona al instante." }
   ];
 
   useEffect(() => {
@@ -209,7 +209,7 @@ const Problems = () => {
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         <div className="text-center mb-32 fade-in-section">
           <h2 className="font-display font-black text-5xl md:text-8xl mb-8 text-white leading-none">Problemas reales. <br /><span className="text-sky italic">Soluciones AI.</span></h2>
-          <p className="text-white/60 text-xl md:text-2xl font-bold max-w-3xl mx-auto leading-relaxed">No somos una agencia más. Somos tu socio tecnológico de crecimiento.</p>
+          <p className="text-white/60 text-xl md:text-2xl font-bold max-w-3xl mx-auto leading-relaxed">No somos marketing tradicional. Somos ingeniería de crecimiento para mascotas.</p>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-6">
@@ -230,14 +230,14 @@ const DemoShowcase = () => (
   <section className="py-32 bg-gray-50 overflow-hidden">
     <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-20 items-center">
       <div className="fade-in-section">
-        <h2 className="text-navy font-display font-black text-5xl md:text-7xl mb-8 leading-tight">Mira cómo <br /><span className="text-ocean italic">transformamos</span> negocios.</h2>
-        <p className="text-gray-500 text-xl mb-12 leading-relaxed font-medium">Un flujo optimizado que convierte visitantes en clientes recurrentes. Desde la primera respuesta de la AI hasta la confirmación de la cita.</p>
+        <h2 className="text-navy font-display font-black text-5xl md:text-7xl mb-8 leading-tight">Mira cómo <br /><span className="text-ocean italic">automatizamos</span> el éxito.</h2>
+        <p className="text-gray-500 text-xl mb-12 leading-relaxed font-medium">Un flujo optimizado que convierte interesados en citas confirmadas mientras tú atiendes a tus clientes actuales.</p>
         <div className="space-y-6">
           {[
-            "Captación inmediata de clientes en WhatsApp",
-            "Agenda sincronizada con tu Google Calendar",
-            "Confirmaciones automáticas vía SMS/WhatsApp",
-            "Métricas de ROI claras y directas"
+            "Captación instantánea de nuevos clientes",
+            "Agenda digital sincronizada en tiempo real",
+            "Recordatorios por WhatsApp automáticos",
+            "Reportes de rendimiento claros y útiles"
           ].map((item, i) => (
             <div key={i} className="flex items-center gap-4 text-lg font-bold text-navy">
               <div className="w-8 h-8 rounded-full bg-ocean flex items-center justify-center text-white text-xs">
@@ -260,18 +260,30 @@ const DemoShowcase = () => (
 
 const Timeline = () => {
   const steps = [
-    { day: "01", title: "Diagnóstico", desc: "Entendemos tus cuellos de botella y definimos la estrategia de automatización personalizada.", img: ASSETS.step1 },
-    { day: "03", title: "Desarrollo", desc: "Diseñamos tu ecosistema visual y entrenamos a tu agente de IA con tu conocimiento.", img: ASSETS.step2 },
-    { day: "05", title: "Integración", desc: "Conectamos todo: Web, WhatsApp, Ads e Instagram bajo un solo motor de crecimiento.", img: ASSETS.step3 },
-    { day: "07", title: "Lanzamiento", desc: "Salimos al aire y empezamos a llenar tu agenda. Te enseñamos a manejar tu dashboard.", img: "https://images.unsplash.com/photo-1583337130417-3346a1be7dee?auto=format&fit=crop&q=80&w=800" }
+    { day: "01", title: "Diagnóstico", desc: "Entendemos tus procesos actuales y diseñamos el mapa de automatización a medida.", img: ASSETS.step1 },
+    { day: "03", title: "Construcción", desc: "Creamos tu nueva presencia web y entrenamos a tu AI Agent con tus precios y servicios.", img: ASSETS.step2 },
+    { day: "05", title: "Integración", desc: "Conectamos todo: WhatsApp, Calendarios e Instagram bajo un solo motor inteligente.", img: ASSETS.step3 },
+    { day: "07", title: "Lanzamiento", desc: "Salimos al aire. Tú recibes tus primeras citas y nosotros monitoreamos cada paso.", img: "https://images.unsplash.com/photo-1583337130417-3346a1be7dee?auto=format&fit=crop&q=80&w=800" }
   ];
+
+  useEffect(() => {
+    const sections = document.querySelectorAll('.fade-in-section');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+    sections.forEach(s => observer.observe(s));
+  }, []);
 
   return (
     <section id="proceso" className="py-40 bg-white relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-32 fade-in-section">
-          <h2 className="text-navy font-display font-black text-6xl md:text-9xl mb-12 leading-none">Cero Caos en <br /><span className="text-ocean italic">7 Días.</span></h2>
-          <p className="text-gray-400 text-2xl font-bold max-w-2xl mx-auto">Un proceso acelerado diseñado para dueños de negocios ocupados.</p>
+          <h2 className="text-navy font-display font-black text-6xl md:text-9xl mb-12 leading-none">De 0 a 100 <br /><span className="text-ocean italic">en 7 días.</span></h2>
+          <p className="text-gray-400 text-2xl font-bold max-w-2xl mx-auto">Un proceso acelerado para que no pierdas ni un solo cliente más.</p>
         </div>
         
         <div className="relative max-w-6xl mx-auto timeline-track">
@@ -314,7 +326,7 @@ const Pricing = () => {
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-32 fade-in-section">
           <h2 className="text-navy font-display font-black text-5xl md:text-8xl mb-8 leading-none">Inversión para <br /><span className="text-ocean italic">Ganar.</span></h2>
-          <p className="text-gray-400 text-2xl font-bold">Un sistema que se paga solo con el primer cliente extra del mes.</p>
+          <p className="text-gray-400 text-2xl font-bold">Sin sorpresas. Inversión inteligente que se paga con el primer cliente extra.</p>
         </div>
 
         <div className="grid lg:grid-cols-3 gap-10">
@@ -349,7 +361,7 @@ const Pricing = () => {
 const FAQ = () => {
   const [openIndex, setOpenIndex] = useState(0);
   const items = [
-    { q: "¿Necesito saber de tecnología?", a: "Nada en absoluto. Si sabes enviar un mensaje por WhatsApp, ya tienes todo el conocimiento necesario. Nosotros nos encargamos de que la tecnología trabaje por ti." },
+    { q: "¿Necesito saber de tecnología?", a: "Absolutamente nada. Si sabes enviar un mensaje por WhatsApp, ya tienes todo el conocimiento necesario. Nosotros nos encargamos de que la tecnología trabaje por ti." },
     { q: "¿Qué pasa si ya tengo una página web?", a: "La mayoría de las webs son solo folletos digitales. Nosotros la transformamos en un motor de ventas activo con inteligencia artificial que agenda por ti." },
     { q: "¿Es seguro para mis clientes?", a: "Totalmente. Utilizamos servidores seguros y procesos cifrados. La IA solo tiene acceso a la información que tú decidas compartir para agendar citas." },
     { q: "¿Cuánto tiempo toma ver resultados?", a: "Muchos negocios ven sus primeras citas automatizadas en las primeras 48 horas tras el lanzamiento del día 7." }
@@ -426,7 +438,9 @@ const App = () => {
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
-        if (entry.isIntersecting) entry.target.classList.add('visible');
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
       });
     }, { threshold: 0.1 });
 
@@ -443,7 +457,7 @@ const App = () => {
       <Navbar />
       <Hero />
       <TrustWall />
-      <Problems />
+      <PainPoints />
       <DemoShowcase />
       <Timeline />
       <Pricing />
